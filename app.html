@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>list</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+
+Body {
+    background-color: burlywood;
+    font-size: 30pt;
+  }
+
+  input[type="button"] {
+background-color: cadetblue;
+  }
+
+  nav {
+    background-color: cadetblue;
+    font-size: 15pt;
+  
+  }
+  </style>
+
+  
+</head>
+<body>
+  
+  <p> Travel Plans!</p> 
+  <br>
+  <input type="text" id="box" value="Type Travel plans"/>
+  <br>
+  <!--Function calling in the body of your code. add the onlick attribute to the div in your body so that when the div is clicked the additem function is called-->
+  <input type="button" value="Add Item" onclick="addItem();"/>
+  <br>
+  <div id="list"></div>
+
+
+  <!--iframe width="560" height="315" src="https://www.youtube.com/embed/XWV-9KLKrsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe!-->
+
+
+
+  <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDlAmY4-CBJkuEpGVEWqd1Iiv9uGOvXbI&q=Thailand">
+</iframe>
+
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDlAmY4-CBJkuEpGVEWqd1Iiv9uGOvXbI&q=Tokyo+Japan">
+</iframe>
+
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDlAmY4-CBJkuEpGVEWqd1Iiv9uGOvXbI&q=United Kingdom">
+</iframe>
+
+<script>
+//create function to add item
+function addItem () { //Javascript function
+  //variable called newitem. When we use dots(.) to separate pieces of code, we are using dot notation. The dot tells the browser that you will be using DMO method and properties.
+  //dom is the keyword 
+  
+  //create a new <div> using the createElement method. Store your new <div> in a variable and give the variable a name. 
+  //then set the value of your new <div> to some text using innerHTML property.
+  var newItem = document.createElement("div");
+  newItem.innerHTML = document.getElementById("box").value;
+  newItem.onclick = removeItem;
+  document.getElementById("list").appendChild(newItem);
+}
+function removeItem(){
+  document.getElementById("list").removeChild(this);
+}
+
+</script>
+</body>
+</html> 
